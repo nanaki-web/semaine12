@@ -1,33 +1,31 @@
-
+-- données pour waz_biens 
 DELETE FROM waz_biens;
-
--- données pour waz_biens                                         
 
 INSERT INTO `waz_biens` (`bi_id`,`bi_type`,`bi_pieces`,`bi_ref`,`bi_description`,`bi_local`,`bi_surf_habitable`,
                         `bi_surf_totale`,`bi_estimations_vente`,`bi_estimation_location`,`bi_diagnostic`) 
-VALUES  (1,"appartement","+6","VE-MA-01-0121","Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
+VALUES  (1,"appartement","+6","MA-0321-01","Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
         Curabitur sed tortor. Integer aliquam adipiscing lacus.","Vito d'Asio","85","110","154981.56€","428.54€","D"),
-        (2,"terrain","5","LO-TE-01-0121","Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
+        (2,"terrain","5","TE-0321-01","Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
         Curabitur sed tortor.Integer aliquam adipiscing","Muzaffarpur","90","120","181688.11€","296.36€","G"),
-        (3,"bureaux","1","VE-AP-01-0121","Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
+        (3,"bureaux","1","BU-0321-01","Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
         Curabitur sed tortor.Integer aliquam adipiscing lacus.","Manavgat","95","140","56558.31€","670.43€","A"),
-        (4,"maison","4","LO-MA-01-0121","Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur sed tortor.
+        (4,"maison","4","MA-0321-01","Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur sed tortor.
          Integer aliquam","Bastogne","100","150","119840.95€","400.73€","A"),
-        (5,"appartement","4","LO-MA-02-0121","Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
+        (5,"appartement","4","AP-0321-01","Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
         Curabitur sed tortor.Integer aliquam adipiscing","Gateshead","115","155","169556.72€","222.23€","F"),
-        (6,"bureaux","+6","LO-AP-01-0221","Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
+        (6,"bureaux","+6","BU-0321-02","Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
         Curabitur sed tortor.Integer aliquam adipiscing lacus.","Solnechnogorsk","85","110","172110.14€","505.91€","V"),
-        (7,"immeuble","1","VE-MA-01-0121","Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur sed",
+        (7,"immeuble","1","IM-0321-01","Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur sed",
         "Annone di Brianza","90","120","149746.93€","644.37€","B"),
-        (8,"terrain","3","LO-TE-01-0121","Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur sed",
+        (8,"terrain","3","TE-0321-02","Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur sed",
         "Bauchi","95","140","80104.87€","567.45€","G"),
-        (9,"bureaux","4","VE-AP-01-0121","Lorem ipsum dolor sit amet,consectetuer adipiscing elit. Curabitur sed tortor.
+        (9,"bureaux","4","BU-0321-03","Lorem ipsum dolor sit amet,consectetuer adipiscing elit. Curabitur sed tortor.
          Integer","Falisolle","100","150","138088.25€","366.37€","F"),
-        (10,"appartement","5","LO-MA-01-0121","Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+        (10,"appartement","5","MA-0321-02","Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
      Curabitur sed tortor. Integer aliquam adipiscing lacus.","San Luis Potosí","115","155","108346.25€","611.48€","D");
 
-DELETE FROM waz_photos;
 -- données pour waz_photos
+DELETE FROM waz_photos;
 
 INSERT INTO `waz_photos` (`pho_id`, `pho_nom`, `bi_id`) VALUES
 (1, 'nom1', 0),
@@ -41,8 +39,8 @@ INSERT INTO `waz_photos` (`pho_id`, `pho_nom`, `bi_id`) VALUES
 (9, 'nom3', 8),
 (10, 'nom1', 9);
 
-DELETE FROM waz_employes;
 -- données pour waz_employes
+DELETE FROM waz_employes;
 
 INSERT INTO `waz_employes` (`emp_id`,`emp_nom`,`emp_prenom`,`emp_adresse`,`emp_tel`,`emp_mail`,`emp_poste`,`emp_mdp`) 
 VALUES (1,"Roberson","Tiger","CP 129, 2067 Vestibulum Chemin","05 92 16 16 15","ornare@neque.net","secretaire",
@@ -65,8 +63,8 @@ VALUES (1,"Roberson","Tiger","CP 129, 2067 Vestibulum Chemin","05 92 16 16 15","
         (10,"Kirkland","Dakota","697-7911 Turpis Rd.","03 73 70 55 27","vel.nisl@sitamet.ca","negociateur_immobilier",
         "WHA89IMT7EC");
 
-DELETE FROM waz_internautes;
 --données waz_internautes
+DELETE FROM waz_internautes;
 
 INSERT INTO  `waz_internautes` (`in_id`,`in_nom`,`in_prenom`,`in_adresse`,`in_telephone`,`in_email`,`in_pays`) 
 VALUES (1,"Martinez","Madison","1415 Sem Chemin","09 64 46 79 86","eget.nisi@montesnasceturridiculus.co.uk","Malta"),
@@ -80,64 +78,79 @@ VALUES (1,"Martinez","Madison","1415 Sem Chemin","09 64 46 79 86","eget.nisi@mon
 (9,"Payne","Simon","899-1417 Arcu. Rue","05 84 93 77 26","in.dolor@mauris.ca","Åland Islands"),
 (10,"Clarke","Nathan","CP 419, 4952 Lacus. Chemin","07 42 71 90 76","pede.nonummy.ut@penatibus.co.uk","Syria");
 
-
+--données waz_annonces
 DELETE FROM waz_annonces;
 
--- donnée pour waz_annonces
+INSERT INTO `waz_annonces` (`an_id`, `an_prix`, `est_active`, `an_ref`, `an_date_disponibilite`, `an_offre`,
+`an_nbre_vues`, `an_date_ajout`, `an_date_modif`, `an_titre`, `bi_id`) 
+VALUES
+(1, '151.00', 1, 'VE-MA-0121-01', '2021-08-26', 'A', 326, '2021-02-21', NULL, 'purus sapien, gravida non, sollicitudin a,
+malesuada id, erat. Etiam', 1),
+(2, '79.00', 0, 'LO-TE-0121-01', '2021-06-14', 'L', 328, '2021-06-10', '2021-08-03 15:16:34', 'eu erat semper rutrum.
+Fusce dolor quam, elementum at, egestas', 2),
+(3, '51.00', 1, 'VE-AP-0121-01', '2021-10-23', 'V', 481, '2021-08-12', NULL, 'arcu imperdiet ullamcorper. Duis at lacus. 
+Quisque purus sapien, gravida', 3),
+(4, '71.00', 0, 'LO-MA-0121-01', '2021-12-14', 'A', 122, '2021-12-04', NULL, 'dolor. Fusce mi lorem, vehicula et, rutrum 
+eu, ultrices sit', 4),
+(5, '141.00', 1, 'VE-MA-0121-01', '2021-09-03', 'L', 106, '2021-04-16', '2021-07-13 01:54:31', 'id, ante. Nunc mauris sapien,
+cursus in, hendrerit consectetuer, cursus', 5),
+(6, '57.00', 0, 'LO-TE-0121-01', '2021-10-22', 'V', 108, '2021-08-10', NULL, 'Etiam ligula tortor, dictum eu, placerat eget, 
+venenatis a, magna.', 6),
+(7, '63.00', 1, 'VE-AP_0121-01', '2021-10-06', 'A', 252, '2021-03-12', '2021-12-02 20:43:05', 'sed dui. Fusce aliquam, 
+enim nec tempus scelerisque, lorem ipsum', 7),
+(8, '87.00', 0, 'LO-MA-0121-01', '2021-09-09', 'L', 92, '2022-01-21', '2021-05-25 07:43:23', 'arcu. 
+Aliquam ultrices iaculis odio. Nam interdum enim non nisi.', 8),
+(9, '128.00', 1, 'LO-TE-0121-01', '2021-03-18', 'V', 485, '2021-03-18', '2022-01-01 15:16:44', 'sodales nisi magna sed dui.
+Fusce aliquam, enim nec tempus', 9),
+(10, '183.00', 0, 'VE-MA-0121-01', '2021-07-20', 'A', 165, '2021-03-16', NULL, 'massa. Integer vitae nibh. Donec est mauris,
+rhoncus id, mollis', 10);
 
-INSERT INTO `waz_annonces` (`an_id`,`an_prix`,`est_active`,`an_ref`,`an_date_disponibilite`,`an_offre`,`an_nbre_vues`,
-                `an_date_ajout`,`an_date_modif`,`bi_id`) 
-VALUES (1,"154,824€","1","VE-MA-0321-001","03.19.22","A",12,"12-01-21","01-20-21","0"),
-(2,"183,562€","1","LO-AP-0321-001","05.05.20","V",45,"01-27-22","01-24-21","1"),
-(3,"172,409€","1","VE-MA-0321-002","01.26.21","A",47,"10-14-21","04-11-21","1"),
-(4,"167,050€","1","LO-AP-0321-002","03.21.22","V",81,"02-07-22","10-12-20","2"),
-(5,"148,300€","1","VE-MA-0321-001","07.03.21","A",29,"01-18-21","12-26-21","3"),
-(6,"146,890€","1","LO-AP-0321-001","06.17.20","A",90,"08-12-20","12-21-20","5"),
-(7,"102,625€","0","VE-MA-0321-002","12.25.21","A",39,"07-29-21","04-26-21","5"),
-(8,"140,707€","0","LO-AP-0321-002","03.21.21","A",65,"09-16-21","03-02-21","4"),
-(9,"172,135€","1","VE-MA-0321-001","12.28.21","A",33,"12-09-20","05-06-21","4"),
-(10,"136,076€","1","LO-AP-0321-001","12.10.20","V",15,"12-04-20","01-20-21","3");
 
 -- donnée pour waz_commentaire
+DELETE FROM waz_commentaire;
 
-INSERT INTO `waz_commentaire` (`co_id`,`co_avis`,`co_notes`,`co_date_ajout`,`in_id`) 
-VALUES (1,"Lorem ipsum",4,"01-13-22","0"),
-(2,"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur sed tortor. Integer aliquam adipiscing lacus.
-Ut nec urna et",1,"02-06-22","1"),
-(3,"Lorem ipsum dolor sit amet, consectetuer adipiscing",3,"01-22-22","1"),
-(4,"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur sed tortor. Integer",3,"08-08-20","2"),
-(5,"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur sed tortor. Integer aliquam adipiscing lacus.
-Ut nec",2,"11-27-20","3"),
-(6,"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur sed tortor. Integer aliquam adipiscing lacus.
-Ut nec urna et",3,"10-07-21","3"),
-(7,"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur sed tortor.
-Integer aliquam",2,"04-12-21","5"),
-(8,"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur sed tortor.
-Integer aliquam adipiscing lacus. Ut",3,"04-12-20","5"),
-(9,"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur sed",4,"01-08-22","2"),
-(10,"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur sed tortor.",1,"04-04-20","9");
+DELETE FROM waz_commentaire;
+INSERT INTO `waz_commentaire` (`co_id`,`co_avis`,`co_notes`,`co_date_ajout`,`in_id`)
+VALUES (1,"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur sed tortor. 
+Integer aliquam adipiscing lacus. Ut nec urna et arcu",3,"2021-03-28 00:41:11","0"),
+(2,"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur sed tortor. Integer aliquam adipiscing lacus."
+,4,"2021-03-17 15:50:24","1"),
+(3,"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur sed tortor. 
+Integer aliquam adipiscing lacus. Ut nec urna",5,"2021-03-30 09:05:15","2"),
+(4,"Lorem",5,"2021-03-31 06:39:46","3"),(5,"Lorem ipsum dolor sit amet,",5,"2021-03-22 15:30:45","4"),
+(6,"Lorem ipsum dolor sit amet, consectetuer",3,"2021-03-10 21:51:42","2"),
+(7,"Lorem ipsum dolor sit amet, consectetuer adipiscing",1,"2021-03-29 18:50:51","4"),
+(8,"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur sed tortor. Integer aliquam adipiscing lacus. 
+Ut nec urna et",3,"2021-03-19 19:25:18","3"),(9,"Lorem ipsum dolor sit amet, consectetuer",
+3,"2021-03-20 17:09:05","7"),
+(10,"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur sed tortor. Integer aliquam adipiscing lacus.
+Ut nec",1,"2021-03-15 07:12:48","1");
 
 -- donnée pour waz_composer
 
+DELETE FROM waz_composer;
 INSERT INTO `waz_composer` (`bi_id`,`opt_id`) 
-VALUES (1,"0"),(2,"1"),(3,"2"),(4,"1"),(5,"4"),(6,"2"),(7,"4"),(8,"6"),(9,"3"),(10,"7");
+VALUES ("10","4"),("2","3"),("2","6"),("5","2"),("10","6"),("7","7"),("6","6"),("4","4"),("10","12"),("8","3");
 
 -- donnée pour waz_negocier
+DELETE FROM waz_negocier;
 
-INSERT INTO `waz_negocier` (`emp_id`,`in_id`,`an_id`,`est_conclu`,`montant_transaction`,`date_debut_transaction`,
-`date_transaction_fin`,`date_dernier_contact`) 
-VALUES ("7","1","1","0","€162,815","01-08-21","02-09-21","07-09-20"),
-("8","2","2","0","€158,138","01-02-21","02-10-21","03-07-21"),
-("9","3","3","1","€145,337","01-01-21","02-27-21","04-12-20"),
-("10","4","4","0","€178,726","02-01-21","02-19-21","01-31-21"),
-("7","5","5","0","€195,851","01-14-21","02-11-21","06-25-20"),
-("8","6","6","0","€185,714","01-01-21","02-23-21","04-17-20"),
-("9","7","7","0","€129,116","01-10-21","03-01-21","12-04-20"),
-("10","8","8","1","€100,074","01-24-21","02-22-21","04-22-20"),
-("7","9","9","0","€146,485","01-01-21","02-10-21","01-02-21"),
-("8","10","10","0","€103,514","01-08-21","02-28-21","08-20-20");
+INSERT INTO `waz_negocier` (`emp_id`, `in_id`, `an_id`, `est_conclu`, `montant_transaction`, 
+`date_debut_transaction`, `date_transaction_fin`, `date_dernier_contact`) 
+VALUES
+(7, 1, 1, 1, '120.00', '2021-01-27', '2021-02-17', '2021-02-17'),
+(7, 5, 5, 1, '105.00', '2021-01-18', '2021-02-20', '2021-02-20'),
+(7, 9, 9, 0, '174.00', '2021-01-21', NULL, '2021-02-17'),
+(8, 2, 2, 0, '76.00', '2021-01-05', NULL, '2021-03-14'),
+(8, 6, 6, 0, '36.00', '2021-01-17', NULL, '2021-01-24'),
+(8, 10, 10, 0, '178.00', '2021-01-11', NULL, '2021-01-18'),
+(9, 3, 3, 1, '59.00', '2021-01-08', '2021-02-13', '2021-03-11'),
+(9, 7, 7, 1, '180.00', '2021-01-24', '2021-02-27', '2021-03-05'),
+(10, 4, 4, 0, '122.00', '2021-01-05', NULL, '2021-02-17'),
+(10, 8, 8, 0, '120.00', '2021-01-15', NULL, '2021-01-29');
 
 -- donnée pour waz_contacter
+DELETE FROM waz_contacter;
 
 INSERT INTO `waz_contacter` (`emp_id`,`in_id`,`sujet`,`question`) 
 VALUES ("7","1","Louer","Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur sed tortor. 
